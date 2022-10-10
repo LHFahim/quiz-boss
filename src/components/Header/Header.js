@@ -3,7 +3,7 @@ import img from './img.jpg';
 
 const Header = () => {
   return (
-    <div className="flex items-center mt-16">
+    <div className="flex flex-col md:flex-row items-center mt-16">
       <div>
         <img src={img} alt="" />
       </div>

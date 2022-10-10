@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 
 const Nav = () => {
@@ -6,23 +7,23 @@ const Nav = () => {
     <nav className="">
       <div className="navbar bg-yellow-400 shadow-2xl mt-5 rounded-xl text-indigo-600">
         <div className="flex-1">
-          <h1 className="text-3xl font-bold ml-10">Quiz Boss</h1>
+          <h1 className="text-3xl font-bold md:ml-10">Quiz Boss</h1>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal p-0 font-semibold">
             <li>
-              <a>Topics</a>
+              <Link to="/">Topics</Link>
             </li>
             <li>
-              <a>Statistics</a>
+              <Link to="statistics">Statistics</Link>
             </li>
             <li>
-              <a>Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
           </ul>
         </div>
       </div>
-      <Header />
+      {/* <Header /> */}
     </nav>
   );
 };
