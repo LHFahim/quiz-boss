@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './layouts/Main';
 import Header from './components/Header/Header';
+import Topics from './components/Topics/Topics';
 
 function App() {
   const router = createBrowserRouter([
@@ -12,7 +12,8 @@ function App() {
       children: [
         {
           path: '/',
-          element: <Header />,
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          element: <Topics />,
         },
       ],
     },

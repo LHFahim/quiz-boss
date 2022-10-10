@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../Header/Header';
 
 const Nav = () => {
   return (
@@ -21,6 +22,7 @@ const Nav = () => {
           </ul>
         </div>
       </div>
+      <Header />
     </nav>
   );
 };
