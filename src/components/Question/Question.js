@@ -3,7 +3,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Question = ({ question }) => {
-  // console.log(question);
+  // console.log(question.question);
+  let questionTitle = question.question;
+  questionTitle = questionTitle.split('<p>').join('');
+  questionTitle = questionTitle.split('</p>').join('');
+
   const notify = () => toast.success('You selected the correct answer!');
 
   const notifyCorrectAnswer = answer =>
@@ -23,9 +27,7 @@ const Question = ({ question }) => {
   return (
     <div className="border p-5">
       <div className="flex justify-between w-3/4 mx-auto">
-        <h1 className="mb-5 font-semibold text-indigo-600">
-          {question.question}
-        </h1>
+        <h1 className="mb-5 font-semibold text-indigo-600">{questionTitle}</h1>
         <svg
           onClick={() => showCorrectAnswer(question)}
           xmlns="http://www.w3.org/2000/svg"
