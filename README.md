@@ -1,6 +1,6 @@
 # Project name: Quiz Boss
 
-## Live website:
+## Live website: https://quizboss-aspiringdev.netlify.app/
 
 ###### Description: This is a simple quiz project I have developed in React. It offers multiple topics such as React, JavsScript, Git, and CSS. Each module has several questions to test one's knowledge.
 
