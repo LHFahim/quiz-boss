@@ -6,6 +6,7 @@ import Topics from './components/Topics/Topics';
 import Blog from './components/Blog/Blog';
 import Quiz from './components/Quiz/Quiz';
 import Statistics from './components/Statistics/Statistics';
+import Error404 from './components/Error404/Error404';
 
 function App() {
   const router = createBrowserRouter([
@@ -38,6 +39,10 @@ function App() {
           element: <Statistics />,
         },
       ],
+    },
+    {
+      path: '*',
+      element: <Error404 />,
     },
   ]);
   return (
