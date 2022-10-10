@@ -17,6 +17,9 @@ const Topic = ({ topic }) => {
           Start Practice
         </Link>
       </div>
+      <p className="text-white">
+        {topic.name} has total of {topic.total} questions
+      </p>
     </div>
   );
 };

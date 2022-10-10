@@ -13,9 +13,14 @@ const Question = ({ question }) => {
   const notifyCorrectAnswer = answer =>
     toast.success(`The correct answer is ` + answer);
 
+  const notifyWrongAnswer = () => {
+    toast.error('Wrong answer');
+  };
   const checkAnswer = selectedAnswer => {
     if (selectedAnswer === question.correctAnswer) {
       notify();
+    } else {
+      notifyWrongAnswer();
     }
   };
 
